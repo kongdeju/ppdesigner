@@ -19,5 +19,5 @@ Go to the directory of your fasta file, then run ppdesigner.
 ##### check outcome #####
 All the output will be in the directory ./out 
 
-	seq_n.txt 
+	seq_n.txt     while the "n" represents 1..n, it depends on the num of sequences in your fasta file, and the order of n is just that of sequences in your fasta file.
 
