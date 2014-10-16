@@ -6,11 +6,18 @@ PPdesigner is designed for automatically choosing specific probes and qualified 
 
 #### Usage ####
 
+##### config ppdesigner ######
 Add ppdesigner path to the system environment variables $PATH.
 
 	you can edit the config file of bash in you home directory ~/.bashrc
 
 #####  run ppdesigner #####
-go to the directory of your fasta file, then run ppdesigner.
+Go to the directory of your fasta file, then run ppdesigner.
 	
 	ppdesigner <your.fasta>
+
+##### check outcome #####
+All the output will be in the directory ./out 
+
+	seq_n.txt 
+
