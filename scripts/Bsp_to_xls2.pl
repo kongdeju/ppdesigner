@@ -1,0 +1,42 @@
+#!/usr/bin/perl -w 
+my $input = shift;
+use Bio::SearchIO;
+open OUT ,">$input.xls";
+my $bsp = Bio::SearchIO->new(-format=>'blast',-file=>"$input");
+while( my $result = $bsp->next_result){
+	my $length =0;
+	my $h_score =0;
+	my $ident =0;
+	my $o_score =0;
+	my $o_num=0;
+	my $query_name = $result->query_name;
+	my @names;
+	my $hit_num = 0;
+	my $o_ident=0;
+	my $query_length = $result->query_length;
+	while( $hit= $result->next_hit){
+		my $hit_name = $hit->name;
+		$hit_num = $hit->num_hsps;
+		$o_num = $o_num + $hit_num;
+		push @names,$hit_name;
+		while( $hsp = $hit->next_hsp){
+			my $hit_len= $hsp->hsp_length;
+			$length = $length + $hit_len;
+			my $score = int($hsp->score);
+			$h_score = $h_score + $score;
+			my $ident1=$hsp->frac_identical('total')*100;
+			my $ident2 = int($ident1);
+			$ident = $ident + $ident2;
+		}
+	}
+	
+	$ident = $ident -1;
+	if (($hit_num-1) != 0 ){
+		 $o_score = int($h_score/($o_num-1));
+		 $o_ident = int($ident/($o_num-1));
+	}
+	$o_num = $o_num-1;
+	$length = $length - $query_length;
+	print OUT "$query_name\t$o_score\t$o_ident\t$length\t$o_num\n";
+
+}

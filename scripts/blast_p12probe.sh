@@ -1,0 +1,7 @@
+db=$1
+`formatdb -i $db -p F`
+for a in `ls *.p1 *.p2 *.probe`
+do
+blastall -p blastn -d $db -i $a -o $a.bsp -e 100
+done
+

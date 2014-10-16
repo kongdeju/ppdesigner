@@ -1,0 +1,500 @@
+  386  ls
+  387  cd
+  388  vi findPSGC.pl 
+  389  ls
+  390  cd T_Kong/
+  391  ls
+  392  cd genbank/
+  393  ls
+  394  cd gbk_27/f
+  395  cd gbk_27
+  396  cd fna/
+  397  ls
+  398  vi try.pl 
+  399  ls
+  400  cd 
+  401  ls
+  402  cd T_Kong/
+  403  ls
+  404  vi bsp_to_xls.pl 
+  405  ls
+  406  vi Assmbly_Kong.pl 
+  407  ls
+  408  vi new.pl 
+  409  ls
+  410  vi pfam_parser.pl 
+  411  ls
+  412  cd gene_cluster/
+  413  ls
+  414  vi pre_cluster.pl 
+  415  ls
+  416  cd ..
+  417  ls
+  418  cd graph/
+  419  ls
+  420  vi genebank_fasta_fna.pl 
+  421  ls
+  422  cd ..
+  423  cd
+  424  ls
+  425  vi findPSGC.pl 
+  426  ls
+  427  cd lxd
+  428  ls
+  429  vi 39.fasta 
+  430  ls
+  431  cd ..
+  432  ls
+  433  vi Find_genecluster_onestep.pl i
+  434  ls
+  435  vi findPSGC.pl 
+  436  ls
+  437  d lxd
+  438  cd lxd
+  439  ls
+  440  perl /work/kongdeju/TOOLS/Predict.pl 
+  441  perl /work/kongdeju/TOOLS/Predict.pl 39.fasta 39 -G&
+  442  ls
+  443  cd ..
+  444  ls
+  445  cd 
+  446  ls
+  447  cd T_Kong/
+  448  ls
+  449  cd 
+  450  vi faa_blast_OK_database_To_xls.pl 
+  451  oligotm 
+  452  oligo
+  453  oligotm 
+  454  ls
+  455  top
+  456  ls
+  457  top
+  458  ls
+  459  cd third_generation/
+  460  ls
+  461  cd 1273/
+  462  ls
+  463  perl /work/kongdeju/TOOLS/Predict.pl 1273 1273 -G&
+  464  cd ..
+  465  ls
+  466  cd 1267/
+  467  ls
+  468  cd 4237
+  469  cd ../43
+  470  cd ../4237/
+  471  ls
+  472  vi 4237.faa
+  473  ls
+  474  cd ..
+  475  ls
+  476  cd 1057/
+  477  ls
+  478  cp faa_blast_phage_to_xls.pl  ../
+  479  cd ..
+  480  ls
+  481  cd 1273/
+  482  ls
+  483  perl ../faa_blast_phage_to_xls.pl 1273.faa
+  484  ls
+  485  cd ..
+  486  ls
+  487  cd 1273/
+  488  ls
+  489  perl ../faa_blast_phage_to_xls.pl 1273.faa
+  490  cd ..
+  491  ls
+  492  vi faa_blast_phage_to_xls.pl 
+  493  ls
+  494  cd 1273/
+  495  ls
+  496  perl ../faa_blast_phage_to_xls.pl 1273.faa
+  497  ls
+  498  cd ..
+  499  ls
+  500  cd third_generation/
+  501  ls
+  502  cd sd13/
+  503  ls
+  504  cd sd13/
+  505  ls
+  506  cd ..
+  507  ls
+  508  vi sd13.fa
+  509  ls
+  510  sed '/>/d' sd13.fa >sd13.new.fa
+  511  vi sd13.new.fa 
+  512  ls
+  513  blastall -p blastn -i sd13.new.fa -o sd13_12.bsp -m 8
+  514  blastall -p blastn -i sd13.new.fa -d ../F2a.fna -o sd13_12.bsp -m 8
+  515  ls
+  516  cd ..
+  517  ls
+  518  cd 1267
+  519  ls
+  520  blastall -p blastn -d ../F2a.fna -i 1267.new.fa -o 1267_f2.bsp -m 8
+  521  cd .
+  522  cd ..
+  523  ls
+  524  cd 1273/
+  525  ls
+  526  cd ..
+  527  ls
+  528  ls AP009048.fna
+  529  ls
+  530  cd 
+  531  cd xiaokong/
+  532  ls
+  533  cd multi_blast/
+  534  ls
+  535  cd prob_design/
+  536  s
+  537  ls
+  538  vi seq_1.regions 
+  539  ls
+  540  vi seq_1.bsp.xls
+  541  ls
+  542  cd sort/
+  543  ls
+  544  vi seq_1.bsp.xls.sort
+  545  ls
+  546  cd ..
+  547  ls
+  548  vi seq_1.bsp.xls 
+  549  ls
+  550  cd sort/
+  551  ls
+  552  vi seq_1.bsp.xls.sort 
+  553  ls
+  554  vi sort_NA.sh 
+  555  ls
+  556  vi NA
+  557  ls
+  558  vi seq_1.bsp.xls.sort 
+  559  ls
+  560  cd ..
+  561  ls
+  562  cd bin/
+  563  ls
+  564  vi Regions_blast.pl 
+  565  ls
+  566  vi seq_out.pl
+  567  ls
+  568  cd ..
+  569  ls
+  570  vi seq_1.bsp
+  571  ls
+  572  vi seq_1.bsp.xls
+  573  ls
+  574  vi Bsp_to_xls.pl 
+  575  perl Bsp_to_xls.pl seq_1.bsp
+  576  vi Bsp_to_xls.pl 
+  577  perl Bsp_to_xls.pl seq_1.bsp
+  578  ls
+  579  vi seq_1.bsp.xls
+  580  vi Bsp_to_xls.pl 
+  581  perl Bsp_to_xls.pl seq_1.bsp
+  582  vi seq_1.bsp.xls
+  583  vi Bsp_to_xls.pl 
+  584  perl Bsp_to_xls.pl seq_1.bsp
+  585  vi seq_1.bsp.xls
+  586  vi Bsp_to_xls.pl 
+  587  perl Bsp_to_xls.pl seq_1.bsp
+  588  vi seq_1.bsp.xls
+  589  vi Bsp_to_xls.pl 
+  590  perl Bsp_to_xls.pl seq_1.bsp
+  591  vi seq_1.bsp.xls
+  592  vi seq_1.bsp
+  593  vi Bsp_to_xls.pl 
+  594  ls
+  595  cd ..
+  596  ls
+  597  cd cd prob_design/
+  598  ls
+  599  cd prob_design/
+  600  ls
+  601  rm sort/
+  602  rm -rf sort/
+  603  ls
+  604  vi seq_1.bsp.xls
+  605  ls
+  606  vi seq_1.regions 
+  607* 
+  608  vi regions_out.xls
+  609  mv regions_out.xls regions_out.pl
+  610  perl regions_out.pl seq_1.regions
+  611  vi regions_out.pl 
+  612  perl regions_out.pl seq_1.regions
+  613  vi regions_out.pl 
+  614  perl regions_out.pl seq_1.regions
+  615  vi regions_out.pl 
+  616  perl regions_out.pl seq_1.regions
+  617  vi regions_out.pl 
+  618  perl regions_out.pl seq_1.regions
+  619  vi regions_out.pl 
+  620  perl regions_out.pl seq_1.regions
+  621  vi regions_out.pl 
+  622  perl regions_out.pl seq_1.regions
+  623  vi regions_out.pl 
+  624  perl regions_out.pl seq_1.regions
+  625  vi regions_out.pl 
+  626  perl regions_out.pl seq_1.regions
+  627  vi seq_1.regions 
+  628  ls
+  629  vi seq_2.regions 
+  630  perl regions_out.pl seq_2.regions
+  631  vi seq_2.regions 
+  632  ls
+  633  vi regions_out.pl 
+  634  ls
+  635  vi regions_out.pl 
+  636  perl regions_out.pl seq_3.regions
+  637  vi regions_out.pl 
+  638  perl regions_out.pl seq_3.regions
+  639  vi regions_out.pl 
+  640  perl regions_out.pl seq_3.regions
+  641  ls *.seq
+  642  vi seq_3.seq
+  643  ls
+  644  vi seq_3.bsp.xls
+  645  paste seq_3.bsp.xls seq_3.seq 
+  646  perl Bsp_to_xls.pl seq_3.bsp 
+  647  paste seq_3.bsp.xls seq_3.seq >seq_3.out
+  648  vi seq_3.out 
+  649  more seq_3.out
+  650  ls
+  651  vi seq_3.out 
+  652  ls
+  653  vi primer_probe.pl
+  654  perl primer_probe.pl seq_3.out
+  655  vi primer_probe.pl
+  656  perl primer_probe.pl seq_3.out
+  657  vi primer_probe.pl
+  658  perl primer_probe.pl seq_3.out
+  659  vi primer_probe.pl
+  660  perl primer_probe.pl seq_3.out
+  661  vi primer_probe.pl
+  662  perl primer_probe.pl seq_3.out
+  663  vi primer_probe.pl
+  664  perl primer_probe.pl seq_3.out
+  665  vi primer_probe.pl
+  666  perl primer_probe.pl seq_3.out
+  667  vi primer_probe.pl
+  668  perl primer_probe.pl seq_3.out
+  669  vi primer_probe.pl
+  670  perl primer_probe.pl seq_3.out
+  671  vi primer_probe.pl
+  672  perl primer_probe.pl seq_3.out
+  673  vi primer_probe.pl
+  674  perl primer_probe.pl seq_3.out
+  675  vi primer_probe.pl
+  676  perl primer_probe.pl seq_3.out
+  677  vi primer_probe.pl
+  678  perl primer_probe.pl seq_3.out
+  679  vi primer_probe.pl
+  680  perl primer_probe.pl seq_3.out
+  681  vi primer_probe.pl
+  682  perl primer_probe.pl seq_3.out
+  683  vi primer_probe.pl
+  684  perl primer_probe.pl seq_3.out
+  685  vi primer_probe.pl
+  686  perl primer_probe.pl seq_3.out
+  687  vi primer_probe.pl
+  688  perl primer_probe.pl seq_3.out
+  689  vi primer_probe.pl
+  690  perl primer_probe.pl seq_3.out
+  691  vi primer_probe.pl
+  692  perl primer_probe.pl seq_3.out
+  693  vi primer_probe.pl
+  694  perl primer_probe.pl seq_3.out
+  695  vi primer_probe.pl
+  696  perl primer_probe.pl seq_3.out
+  697  vi primer_probe.pl
+  698  perl primer_probe.pl seq_3.out
+  699  vi primer_probe.pl
+  700  perl primer_probe.pl seq_3.out
+  701  vi primer_probe.pl
+  702  perl primer_probe.pl seq_3.out
+  703  vi primer_probe.pl
+  704  perl primer_probe.pl seq_3.out
+  705  vi primer_probe.pl
+  706  perl primer_probe.pl seq_3.out
+  707  vi primer_probe.pl
+  708  perl primer_probe.pl seq_3.out
+  709  vi primer_probe.pl
+  710  perl primer_probe.pl seq_3.out
+  711* 
+  712  vi primer_probe.pl
+  713  perl primer_probe.pl seq_3.out
+  714  vi primer_probe.pl
+  715  perl primer_probe.pl seq_3.out
+  716  vi primer_probe.pl
+  717  perl primer_probe.pl seq_3.out
+  718  vi primer_probe.pl
+  719  perl primer_probe.pl seq_3.out
+  720  vi primer_probe.pl
+  721  perl primer_probe.pl seq_3.out
+  722  vi primer_probe.pl
+  723  perl primer_probe.pl seq_3.out
+  724  vi primer_probe.pl
+  725  perl primer_probe.pl seq_3.out
+  726  vi primer_probe.pl
+  727  perl primer_probe.pl seq_3.out
+  728  vi primer_probe.pl
+  729  perl primer_probe.pl seq_3.out
+  730  vi primer_probe.pl
+  731  perl primer_probe.pl seq_3.out
+  732  vi primer_probe.pl
+  733  perl primer_probe.pl seq_3.out
+  734  vi primer_probe.pl
+  735  perl primer_probe.pl seq_3.out
+  736  vi seq_3.*
+  737  ls
+  738  ls seq_3.*
+  739  vi seq_3.p1
+  740  vi seq_3.p2
+  741  vi seq_3.probe
+  742  vi seq_3.p1
+  743  ls
+  744  vi primer_probe.pl 
+  745  ls
+  746  ls *.fna
+  747  foramtdb -i all.fna -p F 
+  748  formatdb -i all.fna -p F
+  749  blastall -i seq_3.p1 -d all.fna -o seq_3.p1.bsp -e 100 
+  750  blastall -p blastn-i seq_3.p1 -d all.fna -o seq_3.p1.bsp -e 100 
+  751  blastall -p blastn -i seq_3.p1 -d all.fna -o seq_3.p1.bsp -e 100 
+  752  vi seq_3.p1.bsp 
+  753  ls
+  754  perl Bsp_to_xls.pl seq_3.p1.bsp
+  755  vi seq_3.p1.bsp.xls 
+  756  ls
+  757  cp Bsp_to_xls.pl Bsp_to_xls2.pl
+  758  vi Bsp_to_xls2.pl 
+  759* 
+  760  perl Bsp_to_xls2.pl seq_3.p1.bsp
+  761  vi seq_3.p1.bsp.xls 
+  762  perl Bsp_to_xls.pl seq_3.p1.bsp
+  763  vi seq_3.p1.bsp.xls 
+  764  vi Bsp_to_xls2.pl 
+  765  vi Bsp_to_xls.pl 
+  766  perl Bsp_to_xls2.pl seq_3.p1.bsp
+  767  vi seq_3.p1.bsp.xls 
+  768  vi Bsp_to_xls2.pl 
+  769  perl Bsp_to_xls2.pl seq_3.p1.bsp
+  770  vi seq_3.p1.bsp.xls 
+  771  vi Bsp_to_xls2.pl 
+  772  perl Bsp_to_xls2.pl seq_3.p1.bsp
+  773  vi seq_3.p1.bsp.xls 
+  774  vi Bsp_to_xls2.pl 
+  775  perl Bsp_to_xls2.pl seq_3.p1.bsp
+  776  vi seq_3.p1.bsp.xls 
+  777  vi Bsp_to_xls2.pl 
+  778  perl Bsp_to_xls.pl seq_3.p1.bsp
+  779  vi seq_3.p1.bsp.xls 
+  780  ls
+  781  cd bin/
+  782  ls
+  783  cd ..
+  784  ls
+  785  vi Regions_blast.pl 
+  786  ls
+  787  cd bin/
+  788  ls
+  789  vi Regions_sort.sh 
+  790  vi cd ..
+  791  ls
+  792  cd .
+  793  cd ..
+  794  ls
+  795  vi seq_3.p1.bsp.xls 
+  796  vi seq_3.p2.bsp.xls
+  797  vi seq_3.p2
+  798  perl primer_probe.pl seq_3.out
+  799  vi seq_3.p2
+  800  ls
+  801  vi seq_3.probe
+  802  ls
+  803  vi seq_3.p1.bsp.xls
+  804  ls
+  805  vi primer_probe.pl 
+  806  ls
+  807  cd ..
+  808  ls
+  809  ls -lh 
+  810  cd prob_design/
+  811  ls
+  812  vi seq_3.p1.bsp.xls
+  813  sort -k1,1 -k5,5n -k4,4n  seq_3.p1.bsp.xls 
+  814  sort -k1,1 -k5,5n -k4,4n  seq_3.p1.bsp.xls >seq_3.p1.bsp.xls.sort
+  815  vi seq_3.p1.bsp.xls.sort
+  816* 
+  817  vi seq_3.p1.bsp.xls.sort
+  818  ls
+  819  vi seq_3.p1.bsp.xls
+  820  ls
+  821  vi probe_uniq.pl
+  822  ls
+  823  vi seq_3.p1.bsp.xls
+  824  ls
+  825  vi primer_probe.pl 
+  826  ls
+  827  cp Bsp_to_xls.pl Bsp_to_xls.pl.bark
+  828  vi Bsp_to_xls.pl
+  829  perl Bsp_to_xls.pl seq_3.p1.bsp
+  830  vi primer_probe.pl 
+  831  ls
+  832  vi primer_probe.pl 
+  833  perl primer_probe.pl seq_3.out
+  834  blastall -p blastn -i seq_3.p1 -d all.fna -o seq_3.p1.bsp -e 100
+  835  vi primer_probe.pl 
+  836  ls
+  837  vi seq_3.p1
+  838  vi primer_probe.pl 
+  839  perl primer_probe.pl seq_3.out
+  840  vi seq_3.p1
+  841  ls
+  842  blastall -p blastn -i seq_3.p1 -d all.fna -o seq_3.p1.bsp -e 100
+  843  perl Bsp_to_xls.pl seq_3.p1.bsp
+  844  vi seq_3.p1.bsp.xls
+  845  ls
+  846  vi Bsp_to_xls.pl
+  847  perl Bsp_to_xls.pl seq_3.p1.bsp
+  848  vi seq_3.p1.bsp.xls
+  849  sort -k5.30,k5.33n -k5.19,k5.22n  -k4,4n -k3,3n -k2,2n seq_3.p1.bsp.xls
+  850  sort -k5.30,5.33n -k5.19,5.22n  -k4,4n -k3,3n -k2,2n seq_3.p1.bsp.xls
+  851  sort -k5.30,5.33n -k5.19,5.22n  -k4,4n -k3,3n -k2,2n seq_3.p1.bsp.xls >seq_3.p1.bsp.xls.sort 
+  852  vi seq_3.p1.bsp.xls.sort 
+  853  vi seq_3.p1.bsp.xls
+  854  sort -k5.30,5.33n -k5.19,5.22n  -k4,4n -k3,3n -k2,2n seq_3.p1.bsp.xls >seq_3.p1.bsp.xls.sort 
+  855  vi seq_3.p1.bsp.xls.sort 
+  856  sort -k5.30,5.33n -k5.19,5.22n 
+  857  sort -k5.30,5.33n -k5.19,5.22n  seq_3.p1.bsp.xls 
+  858* sort -k5,5n seq
+  859  sort -k5,5n  seq_3.p1.bsp.xls 
+  860  sort -k5.30,5.33n  -k4,4n -k3,3n -k2,2n seq_3.p1.bsp.xls >seq_3.p1.bsp.xls.sort 
+  861  vi seq_3.p1.bsp.xls.sort 
+  862  sort -k5.30,5.33n seq_3.p1.bsp.xls
+  863  sort -k5.30,k5.60n seq_3.p1.bsp.xls
+  864  sort -k5.30,5.60n seq_3.p1.bsp.xls
+  865  sort -k5.29,5.60n seq_3.p1.bsp.xls
+  866  awk '{print $5}' seq_3.p1.bsp.xls
+  867  awk '{print $5}' seq_3.p1.bsp.xls | sort -k1.30,1.33n
+  868  awk '{print $5}' seq_3.p1.bsp.xls | sort -k1.30,1.33n >a
+  869  vi a
+  870  vi seq_3.p1.bsp.xls
+  871  sort -k5.30,5.33n seq_3.p1.bsp.xls
+  872  sort -k5.30  seq_3.p1.bsp.xls
+  873  sort -k5.30n  seq_3.p1.bsp.xls
+  874  sort -k5.30 -k4 -k3 -k2 -k1  seq_3.p1.bsp.xls
+  875  sort -k5.30 -k4 -k3 -k2 -k1  seq_3.p1.bsp.xls >seq_3.p1.bsp.xls.sort
+  876  vi seq_3.bsp.xls.sort 
+  877  vi seq_3.p1.bsp.xls.sort 
+  878  uniq -f 4 -s 31 seq_3.p1.bsp.xls.sort 
+  879  uniq -f 4 -s 31 seq_3.p1.bsp.xls.sort > b
+  880  vi b
+  881  ls
+  882  blastall -p blastn -i seq_3.p2 -d all.fna -o seq_3.p2.bsp -e 100
+  883  perl Bsp_to_xls.pl seq_3.p2.bsp 
+  884  history 
+  885  history>probe.hisrory
