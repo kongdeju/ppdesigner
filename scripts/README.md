@@ -10,10 +10,11 @@ Add ppdesigner path to the system environment variables $PATH.
 
 	you can edit the config file of bash in you home directory ~/.bashrc
 
-step 1 run ppdesigner
-````shell
+##### step 1 run ppdesigner #####
+
+````bash
 	ppdesigner <your.fasta>
-````shell
+````bash
 
 	
 
