@@ -29,6 +29,6 @@ Select ideal the probe and primer in seq_$n.txt file. and put the line at the fi
 
 	predict <group$n.fasta>
 	
-Several files will be generated after this step. you need to pay attention to the file "pro_reg.bsp.xls".
+Several files will be generated after this step. you need to pay attention to the file "pro_reg.bsp.xls".1 stands for this probe only combines to its region which indicates good specification. number more than 1 stands for the probe may has corss reaction, you may need go to the last time, and change the probe or primers.
 
 
