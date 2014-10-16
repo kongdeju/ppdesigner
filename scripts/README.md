@@ -8,7 +8,16 @@ PPdesigner is designed for automatically choosing specific probes and qualified 
 
 Add ppdesigner path to the system environment variables $PATH.
 
-	try a little
+	you can edit the config file of bash in you home directory ~/.bashrc
+
+step 1 run ppdesigner
+````shell
+	ppdesigner <your.fasta>
+````shell
+
+	
+
+	
 
     
 
