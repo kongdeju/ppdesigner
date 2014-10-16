@@ -37,3 +37,4 @@ If you complete the last step. you can extract the probes and primers to a file.
 	extract <grout$n.fasta>
 
 You can get  your outcome "primer.xls" "probe.xls".
+You can have a try according to example.md.
