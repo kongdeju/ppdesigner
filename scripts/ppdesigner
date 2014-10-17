@@ -40,7 +40,7 @@ print "step eight: Ranking is done\n";
 print "step final: is done\nNow I will automatically select  the ppp to continue next step\n";
 `mkdir out`;
 `cp *.txt $input ./out`;
-echo "Work is done"
+print "Work is done";
 =cut
 $dir = $ENV{'PWD'};
 chdir("${dir}/out");
