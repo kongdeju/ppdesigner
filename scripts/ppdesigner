@@ -27,5 +27,5 @@ print "step final: is done\nNow I will automatically select  the ppp to continue
 `cp *.txt $input ./out`;
 $dir = $ENV{'PWD'};
 chdir("${dir}/out");
-`perl $Bin/predict $input`;
+`perl $Bin/pppredict $input`;
 print "My work is done\n";
