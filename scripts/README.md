@@ -21,7 +21,9 @@ The k represent the max number of genes in the subgroups. There will be some new
 ##### step2 	 Run ppdesigner #####
 Run ppdesigner. Aquiring the candidate probes and primers list for each target gene in  the same subgroup. You can go to the directory of conresponding subgroup, and run ppdesigner one by one. Or you can run them in one time using linux shell command "find".
 	
-	ppdesigner <group$n.fasta>
+	ppdesigner <group$n.fasta> -options
+	example:
+	ppdesigner input.fasta -pritm 55 -protm 53 -prilen 21 -prolen 19 -lenmax 120 -lenmin 60
 
 All the output will be in the directory "./out". There will be several seq_n.txt containing the probe and primer combination candidates which has been ordered by the scores of probes and primers from high to low. while the "n" represents 1..n, it depends on the num of sequences in your fasta file, and the order of n is just that of sequences in your fasta file. In the seq_n.txt, it looks likes as follows.
 #### step3 Predict the specification of probe ####
