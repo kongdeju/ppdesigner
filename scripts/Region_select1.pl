@@ -2,7 +2,7 @@
 use Bio::SeqIO;
 my $fasta = shift;
 my @seqs;
-my $region_length = 120;
+my $region_length = shift;
 my $in_seq_obj = Bio::SeqIO->new(-file => $fasta, -format => 'fasta');
 while(my $seq = $in_seq_obj ->next_seq){
 	push @seqs , $seq->seq;

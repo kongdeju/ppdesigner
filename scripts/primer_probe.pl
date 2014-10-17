@@ -1,5 +1,6 @@
 #!/usr/bin/perl -w
 use Bio::SeqFeature::Primer;
+use Getopt::Long;
 my $input = shift;
 $input =~ /(.+)?\./;
 my $prex = $1;
@@ -8,12 +9,23 @@ open P2,">$prex.p2";
 open PO,">$prex.probe";
 open IN,"$input";
 my @seq;
-my $P_Tm=54;
+my $pri_Tm=54;
 my $probe_Tm=54;
 my $primer_length=21;
 my $probe_length=19;
 my $up_down =10;
-
+my $length_max=120;
+my $length_min=60;
+Getopt::Long::GetOptions(
+	'Tmpri=i' => \$pri_Tm,
+	'Tmpro=i' => \$probe_Tm,
+	'lenpri=i'=> \$primer_length,
+	'lenpro=i'=> \$probe_length,
+	'lenmax=i'=> \$length_max,
+	'lenmin=i'=> \$length_min,
+);
+my $p1_end=($length_max-$length_min)/2;
+my $p2_start=$length_min+$p1_end;
 while(<IN>){
 	chomp();
 	push @seq, $_;
@@ -23,11 +35,11 @@ foreach my $seq (@seq){
 	my @P1;
 	my @P2;
 	my @probe;
-	my $m = 30-$primer_length;
-	my $n = 90-$probe_length;
+	my $m = $p1_end-$primer_length;
+	my $n = $p2_start-$probe_length;
 	for (my $i=0;$i<$m;$i++){
 		push @P1,substr($seq,$i,$primer_length);
-		push @P2,substr($seq,$i+90,$primer_length);
+		push @P2,substr($seq,$i+$p2_start,$primer_length);
 	}
 	my $t=0;
 	foreach my $P1 (@P1){
@@ -39,7 +51,7 @@ foreach my $seq (@seq){
 		my $polyT=$P1=~/TTTTTTT/;
 		my $primer = Bio::SeqFeature::Primer->new( -seq => "$P1" );
 		my $Tm = $primer->Tm;
-		if ( $Tm >= $P_Tm-$up_down && $Tm <= $P_Tm+$up_down && !$polyA && !$polyT && !$polyC && !$polyG){
+		if ( $Tm >= $pri_Tm-$up_down && $Tm <= $pri_Tm+$up_down && !$polyA && !$polyT && !$polyC && !$polyG){
 
 			
 			printf P1  ">Primer1-innergion%04d-Region%04d\n",$t,$c;
@@ -67,7 +79,7 @@ foreach my $seq (@seq){
 		my $polyG=$P2_rev_com=~/GGGGGGG/;
 		my $primer2 = Bio::SeqFeature::Primer->new( -seq => "$P2_rev_com" );
 		my $Tm = $primer2->Tm;
-		if ($Tm >= $P_Tm-$up_down && $Tm <= $P_Tm+$up_down && !$polyA && !$polyT && !$polyC && !$polyG){
+		if ($Tm >= $pri_Tm-$up_down && $Tm <= $pri_Tm+$up_down && !$polyA && !$polyT && !$polyC && !$polyG){
 			printf P2  ">Primer2-innergion%04d-Region%04d\n",$x,$c;
 			printf  P2 "$P2_rev_com\n";
 		}
@@ -79,8 +91,8 @@ foreach my $seq (@seq){
                 }   
 	$x++;
 	} 
-	for (my $j=0;$j<$n-30;$j++){
-		push @probe,substr($seq,$j+30,$probe_length);
+	for (my $j=0;$j<$n-$p1_end;$j++){
+		push @probe,substr($seq,$j+$p1_end,$probe_length);
 	}
 	my $y=0;
 	foreach my $probe (@probe){
@@ -92,7 +104,7 @@ foreach my $seq (@seq){
         my $polyT=$probe=~/TTTTTT/;
                 my $primer = Bio::SeqFeature::Primer->new( -seq => "$probe" );
 		my $Tm = $primer->Tm;
-		if ( $Tm >= $P_Tm-$up_down && $Tm <= $P_Tm+$up_down && !$polyA && !$polyT && !$polyC && !$polyG){
+		if ( $Tm >= $probe_Tm-$up_down && $Tm <= $probe_Tm+$up_down && !$polyA && !$polyT && !$polyC && !$polyG){
 			printf PO  ">Probe12-innergion%04d-Region%04d\n",$y,$c;
 			printf  PO "$probe\n";
 		}

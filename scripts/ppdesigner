@@ -1,10 +1,25 @@
 #!/usr/bin/perl -w
 use FindBin qw($Bin);
+use Getopt::Long;
+my $Tm_primer=55;
+my $Tm_probe=55;
+my $length_primer=20;
+my $length_probe=18;
+my $length_region_max=120;
+my $length_region_min=60;
+Getopt::Long::GetOptions(
+	'tmpri=i' => \$Tm_primer,
+	'tmpro=i' => \$Tm_probe,
+	'lenpri=i'=> \$length_primer,
+	'lenpro=i'=> \$length_probe,
+	'lenmax=i'=> \$length_region_max,
+	'lenmin=i'=> \$length_region_min,
+);
 my $input =shift;
-`perl $Bin/Region_select1.pl $input`;                    
+`perl $Bin/Region_select1.pl $input $length_region_max`;                    
 print "step one: region selecting done \n";
 `sh $Bin/seq_out.sh`;             	
-`sh $Bin/primer_probe.sh`;					
+`sh $Bin/primer_probe.sh $Tm_primer $Tm_probe $length_primer $length_probe $length_region_max $length_region_min`;					
 print "step two: primers probe selecting done\n";
 `sh $Bin/primer_probe_blast.sh $input`;
 print "step three: Blasting is over\n";
@@ -20,7 +35,7 @@ print "step six: sorting and uniqing is done\n";
 print "step seven: HEBING is done\n";
 `sh $Bin/rank_primer_probe.sh`;
 print "step eight: Ranking is done\n";
-`sh $Bin/ouput.sh`;
+`sh $Bin/ouput.sh $length_region_min $length_region_max $length_primer`;
 `sh $Bin/final.sh`;
 print "step final: is done\nNow I will automatically select  the ppp to continue next step\n";
 `mkdir out`;
