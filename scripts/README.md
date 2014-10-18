@@ -22,6 +22,7 @@ The k represent the max number of genes in the subgroups. There will be some new
 Run ppdesigner. Aquiring the candidate probes and primers list for each target gene in  the same subgroup. You can go to the directory of conresponding subgroup, and run ppdesigner one by one. Or you can run them in one time using linux shell command "find".
 	
 	ppdesigner <group$n.fasta> -options
+	
 	example:
 	ppdesigner input.fasta -pritm 55 -protm 53 -prilen 21 -prolen 19 -lenmax 120 -lenmin 60
 
