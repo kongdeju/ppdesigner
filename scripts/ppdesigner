@@ -39,7 +39,7 @@ print "step eight: Ranking is done\n";
 `sh $Bin/final.sh`;
 print "step final: is done\nNow I will automatically select  the ppp to continue next step\n";
 `mkdir out`;
-`cp *.txt $input ./out`;
+`cp seq*.txt $input ./out`;
 print "Work is done";
 =cut
 $dir = $ENV{'PWD'};
