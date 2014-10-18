@@ -8,10 +8,10 @@ my $length_probe=18;
 my $length_region_max=120;
 my $length_region_min=60;
 Getopt::Long::GetOptions(
-	'tmpri=i' => \$Tm_primer,
-	'tmpro=i' => \$Tm_probe,
-	'lenpri=i'=> \$length_primer,
-	'lenpro=i'=> \$length_probe,
+	'pritm=i' => \$Tm_primer,
+	'protm=i' => \$Tm_probe,
+	'prilen=i'=> \$length_primer,
+	'prolen=i'=> \$length_probe,
 	'lenmax=i'=> \$length_region_max,
 	'lenmin=i'=> \$length_region_min,
 );
