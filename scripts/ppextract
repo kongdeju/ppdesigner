@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 use Bio::SeqFeature::Primer;
 #$input=head.txt $input2=group.txt
-my $input = head.txt;
+my $input = "head.txt";
 my @genes;
 my $in2 = shift;
 open IN2, "$in2";
